@@ -939,6 +939,7 @@ export default function SettingsPage() {
     if (l.startsWith('zh-TW') || l === 'zh-Hant') return 'zh-TW'
     if (l.startsWith('zh')) return 'zh-CN'
     if (l.startsWith('ja')) return 'ja'
+    if (l.startsWith('de')) return 'de'
     return 'en'
   })()
 
@@ -972,6 +973,7 @@ export default function SettingsPage() {
               <option value="zh-CN">{t('language.zhCN')}</option>
               <option value="zh-TW">{t('language.zhTW')}</option>
               <option value="ja">{t('language.ja')}</option>
+              <option value="de">{t('language.de')}</option>
             </select>
           </label>
         </section>

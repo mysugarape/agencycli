@@ -6,6 +6,7 @@ import en from '../locales/en/common.json'
 import zhCN from '../locales/zh-CN/common.json'
 import zhTW from '../locales/zh-TW/common.json'
 import ja from '../locales/ja/common.json'
+import de from '../locales/de/common.json'
 
 export const defaultNS = 'common'
 export const resources = {
@@ -13,6 +14,7 @@ export const resources = {
   'zh-CN': { common: zhCN },
   'zh-TW': { common: zhTW },
   ja: { common: ja },
+  de: { common: de },
 } as const
 
 void i18n
@@ -21,7 +23,7 @@ void i18n
   .init({
     resources,
     fallbackLng: 'en',
-    supportedLngs: ['en', 'zh-CN', 'zh-TW', 'ja'],
+    supportedLngs: ['en', 'zh-CN', 'zh-TW', 'ja', 'de'],
     defaultNS,
     ns: [defaultNS],
     interpolation: { escapeValue: false },

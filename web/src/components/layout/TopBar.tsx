@@ -17,6 +17,7 @@ const languages = [
   { code: 'zh-CN', label: '简体中文' },
   { code: 'zh-TW', label: '繁體中文' },
   { code: 'ja', label: '日本語' },
+  { code: 'de', label: 'Deutsch' },
 ] as const
 
 function currentLang(): string {
@@ -24,6 +25,7 @@ function currentLang(): string {
   if (lng.startsWith('zh-TW') || lng === 'zh-Hant') return 'zh-TW'
   if (lng.startsWith('zh')) return 'zh-CN'
   if (lng.startsWith('ja')) return 'ja'
+  if (lng.startsWith('de')) return 'de'
   return 'en'
 }
 

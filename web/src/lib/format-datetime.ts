@@ -14,7 +14,7 @@ export function useFormatDateTime() {
       if (Number.isNaN(d.getTime())) {
         return '—'
       }
-      const locale = i18n.language === 'zh-CN' ? 'zh-CN' : 'en'
+      const locale = i18n.language === 'zh-CN' ? 'zh-CN' : i18n.language.startsWith('de') ? 'de-DE' : 'en'
       return new Intl.DateTimeFormat(locale, {
         dateStyle: 'short',
         timeStyle: 'medium',
